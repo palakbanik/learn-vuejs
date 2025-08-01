@@ -12,6 +12,8 @@
 
 <script>
 export default {
+	name: "ConditionalRendering",
+
 	data() {
 		return {
 			showCondition: false,

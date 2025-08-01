@@ -13,22 +13,46 @@
 
 	<!-- <VModel />	 -->
 	<!-- <TwoWayBinding /> -->
-	<!-- <ChechBoxAndRadionValue /> -->
-	<ConditionalRendering />
+	<!-- <ConditionalRendering /> -->
+	<!-- <ConditionalRendering /> -->
+	<!-- <ForLoopAndList /> -->
+	<Child heading="Child Components" name="Polok Banik" :age=23 :usersDetails="users" :getData="getData" />
 </template>
 
 <script>
-import ChechBoxAndRadionValue from "./components/ChechBoxAndRadionValue.vue";
+import CheckBoxAndRadioValue from "./components/CheckBoxAndRadioValue.vue";
 import ConditionalRendering from "./components/ConditionalRendering.vue";
 import TwoWayBinding from "./components/twoWayBinding.vue";
-import VModel from "./components/v-model.vue";
+import VModel from "./components/VModel.vue";
+import ForLoopAndList from "./components/ForLoopAndList.vue";
+import Child from "./components/Child.vue";
 export default {
 	components: {
 		VModel,
 		TwoWayBinding,
-		ChechBoxAndRadionValue,
+		CheckBoxAndRadioValue,
 		ConditionalRendering,
+		ForLoopAndList,
+		Child
 	},
+
+	data() {
+		return {
+			users: [
+				{ name: "Polok", age: 23 },
+				{ name: "Nishan", age: 24 },
+				{ name: "Kopil", age: 25 },
+				{ name: "Showrov", age: 26 },
+			]
+		}
+	},
+
+	methods: {
+		getData() {
+			// alert("function is called")
+			this.users.map((user) => user.name)
+		}
+	}
 
 	//   data() {
 	//     return {

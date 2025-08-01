@@ -17,6 +17,8 @@
 
 <script>
 export default {
+	name: "CheckBoxAndRadioValue",
+
 	data() {
 		return {
 			technology: []
