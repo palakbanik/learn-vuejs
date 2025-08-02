@@ -1,7 +1,6 @@
 <template>
   <h1>Parent Component</h1>
   <br />
-  <!-- <Child /> -->
 
   <ul>
     <li v-for="user in users" :key="user.name">
