@@ -20,7 +20,9 @@
   <!-- <Parent /> -->
   <!-- <HTMLBinding /> -->
   <!-- <ClassBinding /> -->
-  <ChildToParentProps :passData="passData" />
+  <!-- <ChildToParentProps :passData="passData" /> -->
+  <!-- <Ref /> -->
+  <SimpleForm />
 </template>
 
 <script>
@@ -34,6 +36,8 @@ import Child from "./components/Child.vue";
 import Parent from "./components/reuseComponents/Parent.vue";
 import ClassBinding from "./components/ClassBinding.vue";
 import ChildToParentProps from "./components/ChildToParentProps.vue";
+import SimpleForm from "./components/SimpleForm.vue";
+import Ref from "./components/Ref.vue";
 export default {
   components: {
     VModel,
@@ -45,7 +49,9 @@ export default {
     Parent,
     HTMLBinding,
     ClassBinding,
+    Ref,
     ChildToParentProps,
+    SimpleForm,
   },
 
   data() {
