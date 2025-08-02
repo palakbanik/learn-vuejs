@@ -16,7 +16,8 @@
 	<!-- <ConditionalRendering /> -->
 	<!-- <ConditionalRendering /> -->
 	<!-- <ForLoopAndList /> -->
-	<Child heading="Child Components" name="Polok Banik" :age=23 :usersDetails="users" :getData="getData" />
+	<!-- <Child heading="Child Components" name="Polok Banik" :age=23 :usersDetails="users" :getData="getData" /> -->
+	<Parent />
 </template>
 
 <script>
@@ -26,6 +27,7 @@ import TwoWayBinding from "./components/twoWayBinding.vue";
 import VModel from "./components/VModel.vue";
 import ForLoopAndList from "./components/ForLoopAndList.vue";
 import Child from "./components/Child.vue";
+import Parent from "./components/reuseComponents/Parent.vue";
 export default {
 	components: {
 		VModel,
@@ -33,7 +35,8 @@ export default {
 		CheckBoxAndRadioValue,
 		ConditionalRendering,
 		ForLoopAndList,
-		Child
+		Child,
+		Parent
 	},
 
 	data() {
@@ -49,8 +52,7 @@ export default {
 
 	methods: {
 		getData() {
-			// alert("function is called")
-			this.users.map((user) => user.name)
+			alert("function is called")
 		}
 	}
 
